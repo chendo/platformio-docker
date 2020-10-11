@@ -14,10 +14,3 @@ RUN platformio settings set enable_telemetry false \
   && platformio settings set check_libraries_interval 365 \
   && platformio settings set check_platforms_interval 365
 
-RUN useradd --create-home --shell /bin/bash --home-dir /build builder
-
-USER builder
-
-RUN mkdir /build/.platformio
-
-WORKDIR /build

@@ -1,6 +1,6 @@
-FROM ubuntu:20.04
+FROM ubuntu:21.04
 
-ENV PLATFORMIO_VERSION="5.0.1"
+ENV PLATFORMIO_VERSION="5.2.2" DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -qq && apt-get install -qq -y --no-install-recommends wget unzip git make nano xz-utils gcc python3 curl python3-pip python3-dev build-essential \
  && python3 -m pip install --upgrade pip setuptools \
  && pip install -U platformio==${PLATFORMIO_VERSION} \
